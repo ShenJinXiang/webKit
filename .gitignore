@@ -1,0 +1,25 @@
+﻿#忽略编译文件#
+web/WEB-INF/classes
+#忽略日志#
+logs
+#忽略临时文件#
+WebRoot/tmp
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+#netbeans
+build.xml
+web/META-INF/context.xml
+glassfish-web.xml
+/nbproject
+/build/
+/dist/
+web/temp/
+
+#idea
+.idea/
+out/
+#OSX
+.DS_Store
+
