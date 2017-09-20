@@ -14,7 +14,7 @@
     </style>
     <title>区域</title>
 </head>
-<body>
+<body style="padding: 15px;">
 <table class="layui-table">
     <colgroup>
         <col width="150">
@@ -115,15 +115,97 @@
         <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
     </tr>
     <tr>
-        <td>许闲心</td>
+        <td>shenjinxiang</td>
         <td>2016-11-28</td>
-        <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
+    </tr>
+    <tr>
+        <td>shenjinxiang</td>
+        <td>2016-11-28</td>
+        <td>123123123</td>
     </tr>
     </tbody>
 </table>
+<h1>shenjinxiang</h1>
 <%=RenderHelper.includedJavascript(request, "/static/plugins/layui/layui.js") %>
 <script>
-
+//    parent.document.getElementById("external-frame").height=0;
+//    parent.document.getElementById("external-frame").height=document.body.scrollHeight;
 </script>
 </body>
 </html>

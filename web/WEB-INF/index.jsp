@@ -7,18 +7,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= RenderHelper.includedStyle(request, "/static/plugins/layui/css/layui.css") %>
+    <%= RenderHelper.includedStyle(request, "/static/css/css.css") %>
     <%
         String ctx = request.getContextPath();
     %>
     <style>
-        .module-box{width: 100%; height: 100%;}
     </style>
     <title>webKit</title>
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo">layui 后台布局</div>
+        <div class="layui-logo">webKit</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item"><a href="">控制台</a></li>
@@ -77,10 +77,8 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">
-            <%--<iframe src="http://wow.blizzard.cn/landing" id="external-frame" frameborder="0" width="100%"></iframe>--%>
-            <iframe src="<%=ctx%>/fwh" id="external-frame" frameborder="0" width="100%"></iframe>
-        </div>
+            <%--<iframe src="https://eve.tiancity.com" id="main-frame" class="lay-webkit-main-frame" frameborder="0" ></iframe>--%>
+            <iframe src="<%=ctx%>/system/zyxx" id="main-frame" class="lay-webkit-main-frame" frameborder="0" ></iframe>
     </div>
 
     <div class="layui-footer">
@@ -88,26 +86,16 @@
         © layui.com - 底部固定区域
     </div>
 </div>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 <%=RenderHelper.includedJavascript(request, "/static/plugins/layui/layui.js") %>
+<%=RenderHelper.includedJavascript(request, "/static/js/common.js") %>
 <script>
     //JavaScript代码区域
     layui.use('element', function(){
         var element = layui.element;
 
     });
-
-    function setIframeHeight(iframe) {
-        if (iframe) {
-            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-            if (iframeWin.document.body) {
-                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
-            }
-        }
-    };
-
-    window.onload = function () {
-        setIframeHeight(document.getElementById('external-frame'));
-    };
+    $(".lay-webkit-main-frame").height($(".lay-webkit-main-frame").parent(".layui-body").height());
 </script>
 </body>
 </html>

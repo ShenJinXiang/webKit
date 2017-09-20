@@ -2,8 +2,7 @@ package com.qysoft.platform.config;
 
 import com.jfinal.config.Interceptors;
 import com.jfinal.config.Routes;
-import com.qysoft.platform.actions.AreaAction;
-import com.qysoft.platform.actions.FwhAction;
+import com.qysoft.platform.actions.system.ZyxxAction;
 import com.qysoft.rapid.core.Rapid;
 import com.qysoft.rapid.core.RapidConifg;
 import com.qysoft.rapid.plugin.dbtype.PlatformDbType;
@@ -16,8 +15,7 @@ public class Config extends RapidConifg {
     @Override
     public void configAction(Routes me) {
 
-        me.add("/area", AreaAction.class);
-        me.add("/fwh", FwhAction.class);
+        me.add("/system/zyxx", ZyxxAction.class);
     }
 
     @Override
