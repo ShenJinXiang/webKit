@@ -10,15 +10,24 @@
     <%
         String ctx = request.getContextPath();
     %>
+    <script>
+        var ctx = '<%=ctx%>';
+    </script>
     <style>
     </style>
     <title>资源管理</title>
 </head>
 <body style="padding: 15px;">
 zyxx
+<table id="zyxxTable" lay-filter="test"></table>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 <%=RenderHelper.includedJavascript(request, "/static/plugins/layui/layui.js") %>
 <%=RenderHelper.includedJavascript(request, "/static/js/common.js") %>
-<%=RenderHelper.includedAutoJavascript(request) %>
+<script>
+    layui.config({
+        base: ctx + '/static/js/system/'
+    }).use('zyxx');
+</script>
+<%--<%=RenderHelper.includedAutoJavascript(request) %>--%>
 </body>
 </html>

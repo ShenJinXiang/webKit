@@ -95,7 +95,7 @@
         var element = layui.element;
 
     });
-    $(".lay-webkit-main-frame").height($(".lay-webkit-main-frame").parent(".layui-body").height());
+    $(".lay-webkit-main-frame").height($(".lay-webkit-main-frame").parent(".layui-body").height() - 3);
 </script>
 </body>
 </html>
