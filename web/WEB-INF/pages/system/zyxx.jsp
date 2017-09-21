@@ -22,12 +22,7 @@ zyxx
 <table id="zyxxTable" lay-filter="test"></table>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 <%=RenderHelper.includedJavascript(request, "/static/plugins/layui/layui.js") %>
-<%=RenderHelper.includedJavascript(request, "/static/js/common.js") %>
-<script>
-    layui.config({
-        base: ctx + '/static/js/system/'
-    }).use('zyxx');
-</script>
-<%--<%=RenderHelper.includedAutoJavascript(request) %>--%>
+<%=RenderHelper.includedJavascript(request, "/static/js/module-config.js") %>
+<%=RenderHelper.includedAutoJavascript(request) %>
 </body>
 </html>

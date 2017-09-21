@@ -88,13 +88,7 @@
 </div>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 <%=RenderHelper.includedJavascript(request, "/static/plugins/layui/layui.js") %>
-<%=RenderHelper.includedJavascript(request, "/static/js/common.js") %>
 <script>
-    //JavaScript代码区域
-    layui.use('element', function(){
-        var element = layui.element;
-
-    });
     $(".lay-webkit-main-frame").height($(".lay-webkit-main-frame").parent(".layui-body").height() - 3);
 </script>
 </body>
