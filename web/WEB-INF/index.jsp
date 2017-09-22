@@ -78,7 +78,7 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
             <%--<iframe src="https://eve.tiancity.com" id="main-frame" class="lay-webkit-main-frame" frameborder="0" ></iframe>--%>
-            <iframe src="<%=ctx%>/system/zyxx" id="main-frame" class="lay-webkit-main-frame" frameborder="0" ></iframe>
+            <iframe src="<%=ctx%>/system/zygl" id="main-frame" class="lay-webkit-main-frame" frameborder="0" ></iframe>
     </div>
 
     <div class="layui-footer">
@@ -89,6 +89,11 @@
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 <%=RenderHelper.includedJavascript(request, "/static/plugins/layui/layui.js") %>
 <script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
     $(".lay-webkit-main-frame").height($(".lay-webkit-main-frame").parent(".layui-body").height() - 3);
 </script>
 </body>

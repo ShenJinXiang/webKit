@@ -1,7 +1,7 @@
 
 layui.use(['common', 'table'], function(){
     var common = layui.common;
-    common.doService(ctx + '/system/zyxx/query', {}, function(data) {
+    common.doService(ctx + '/system/zygl/query', {}, function(data) {
        console.log(data);
     });
 

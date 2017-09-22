@@ -14,3 +14,11 @@ CREATE TABLE `xtwh_zyxx` (
   PRIMARY KEY (`zyid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 
+insert into xtwh_zyxx
+(`zyid`, `zymc`, `sjzyid`, `zylj`, `zytb`, `zyms`, `zylx`, `yxbz`, `zypx`)
+VALUES
+('001', '系统维护', null, '#', null, '系统维护', 0, 1, 1),
+('001001', '机构管理', '001', '/system/jggl', null, '机构管理', 0, 1, 1),
+('001002', '人员管理', '001', '/system/rygl', null, '人员管理', 0, 1, 2),
+('001003', '角色管理', '001', '/system/jsgl', null, '角色管理', 0, 1, 3),
+('001004', '资源管理', '001', '/system/zygl', null, '资源管理', 0, 1, 4)

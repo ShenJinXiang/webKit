@@ -8,7 +8,7 @@ import com.qysoft.rapid.domain.Bean;
 /**
  * Created by shenjinxiang on 2017/9/20.
  */
-public class ZyxxAction extends RapidAction {
+public class ZyglAction extends RapidAction {
 
     public void index() {
         renderJsp("/WEB-INF/pages/system/zyxx.jsp");
