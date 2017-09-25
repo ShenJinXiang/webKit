@@ -2,6 +2,7 @@ package com.qysoft.platform.config;
 
 import com.jfinal.config.Interceptors;
 import com.jfinal.config.Routes;
+import com.qysoft.platform.actions.main.GzkbAction;
 import com.qysoft.platform.actions.system.ZyglAction;
 import com.qysoft.rapid.core.Rapid;
 import com.qysoft.rapid.core.RapidConifg;
@@ -15,6 +16,7 @@ public class Config extends RapidConifg {
     @Override
     public void configAction(Routes me) {
 
+        me.add("/gzkb", GzkbAction.class);
         me.add("/system/zygl", ZyglAction.class);
     }
 

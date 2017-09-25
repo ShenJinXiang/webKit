@@ -1,6 +1,7 @@
-package com.qysoft.rapid.actions;
+package com.qysoft.platform.actions.main;
 
 import com.qysoft.platform.services.system.ZyglService;
+import com.qysoft.rapid.actions.RapidAction;
 import com.qysoft.rapid.aop.annotation.AutoService;
 import com.qysoft.rapid.domain.Bean;
 

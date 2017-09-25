@@ -4,7 +4,7 @@ import com.jfinal.config.*;
 import com.jfinal.core.ActionReporter;
 import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
-import com.qysoft.rapid.actions.MainAction;
+import com.qysoft.platform.actions.main.MainAction;
 import com.qysoft.rapid.aop.interceptor.ActionInterceptor;
 import com.qysoft.rapid.aop.interceptor.ServiceInterceptor;
 import com.qysoft.rapid.consts.RapidConsts;

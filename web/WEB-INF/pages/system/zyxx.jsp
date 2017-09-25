@@ -17,7 +17,7 @@
     </style>
     <title>资源管理</title>
 </head>
-<body style="padding: 15px;">
+<body class='layui-anim layui-anim-upbit' style="padding: 15px;">
 zyxx
 <table id="zyxxTable" lay-filter="test"></table>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
