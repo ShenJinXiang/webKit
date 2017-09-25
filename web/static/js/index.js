@@ -6,7 +6,6 @@ layui.use('element', function(){
     $(window).resize(initMainFrameHeight);
 
     $("#menu-nav a").on("click", function() {
-        debugger
         var zyid = $(this).attr('zyid');
         var zylj = $(this).attr('zylj');
         var zymc = $(this).attr("zymc");
@@ -26,17 +25,24 @@ layui.use('element', function(){
             $("#lay-main-content .layui-tab-item").eq(_index - 1).addClass("layui-show");
         }
         setSelectMenu();
+        return false;
     });
 
     $("#lay-main-title").on('click', 'li', function() {
-        setSelectMenu();
+        var zyid = $(this).attr("zyid");
+        $("#menu-nav .layui-this").removeClass("layui-this");
+        if ($("#menu-nav [zyid='" + zyid + "']").size() > 0) {
+            $("#menu-nav [zyid='" + zyid + "']").parent().addClass("layui-this");
+        }
     });
 
     function setSelectMenu() {
+        debugger
         var zyid = $("#lay-main-title .layui-this").attr('zyid');
+        console.log("zyid -> " + zyid);
         $("#menu-nav .layui-this").removeClass("layui-this");
         if ($("#menu-nav [zyid='" + zyid + "']").size() > 0) {
-            $("#menu-nav [zyid='" + zyid + "']").addClass("layui-this");
+            $("#menu-nav [zyid='" + zyid + "']").parent().addClass("layui-this");
         }
     }
 

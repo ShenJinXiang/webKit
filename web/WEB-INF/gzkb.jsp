@@ -16,7 +16,7 @@
     </style>
     <title>工作看板</title>
 </head>
-<body>
+<body class='layui-anim layui-anim-upbit' style="padding: 15px;">
 <p>工作看板</p>
 <p>工作看板</p>
 <p>工作看板</p>
