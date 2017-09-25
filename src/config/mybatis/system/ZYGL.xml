@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qysoft.platform.mappers.system.ZyxxMapper">
+
+    <select id="queryYjzyxxList" resultType="bean" >
+        SELECT
+          `zyid`,
+          `zymc`,
+          `sjzyid`,
+          `zylj`,
+          `zytb`,
+          `zyms`,
+          `zylx`,
+          `yxbz`,
+          `zypx`,
+          (select count(0) from xtwh_zyxx t where t.sjzyid = xtwh_zyxx.zyid) ejzy_size
+        FROM xtwh_zyxx
+        <where>
+            and sjzyid is null
+            and zylx = 0
+        </where>
+        order by zypx asc
+    </select>
+
+    <select id="queryEjzyxxListBySjzyid" parameterType="string" resultType="bean" >
+        select
+            `zyid`,
+            `zymc`,
+            `sjzyid`,
+            `zylj`,
+            `zytb`,
+            `zyms`,
+            `zylx`,
+            `yxbz`,
+            `zypx`
+        FROM xtwh_zyxx
+        <where>
+            and sjzyid = #{sjzyid}
+            and zylx = 0
+        </where>
+        order by zypx asc
+    </select>
+
+</mapper>

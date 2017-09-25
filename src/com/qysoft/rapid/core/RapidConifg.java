@@ -9,6 +9,7 @@ import com.qysoft.rapid.aop.interceptor.ActionInterceptor;
 import com.qysoft.rapid.aop.interceptor.ServiceInterceptor;
 import com.qysoft.rapid.consts.RapidConsts;
 import com.qysoft.rapid.plugin.dbtype.PlatformDbType;
+import com.qysoft.rapid.plugin.druid.DruidStatViewHandler;
 
 /**
  * Created by shenjinxiang on 2017-08-23.
@@ -72,7 +73,9 @@ public abstract class RapidConifg extends JFinalConfig {
 
     @Override
     public void configHandler(Handlers handlers) {
-
+        //druid监控
+        DruidStatViewHandler dvh =  new DruidStatViewHandler("/druid");
+        handlers.add(dvh);
     }
 
 }

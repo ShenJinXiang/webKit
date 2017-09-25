@@ -22,3 +22,9 @@ VALUES
 ('001002', '人员管理', '001', '/system/rygl', null, '人员管理', 0, 1, 2),
 ('001003', '角色管理', '001', '/system/jsgl', null, '角色管理', 0, 1, 3),
 ('001004', '资源管理', '001', '/system/zygl', null, '资源管理', 0, 1, 4)
+
+insert into xtwh_zyxx
+(`zyid`, `zymc`, `sjzyid`, `zylj`, `zytb`, `zyms`, `zylx`, `yxbz`, `zypx`)
+VALUES
+('002', '系统运行', null, '#', null, '系统运行', 0, 1, 100),
+('002001', '数据库监控', '002', '/druid/index.html', null, '数据库监控', 0, 1, 1)

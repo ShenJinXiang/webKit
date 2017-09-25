@@ -8,5 +8,6 @@
     <mappers>
         <mapper resource="config/mybatis/AREA.xml" />
         <mapper resource="config/mybatis/TestUser.xml" />
+        <mapper resource="config/mybatis/system/ZYGL.xml" />
     </mappers>
 </configuration>
