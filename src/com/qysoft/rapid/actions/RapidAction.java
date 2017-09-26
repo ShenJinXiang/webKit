@@ -1,6 +1,7 @@
 package com.qysoft.rapid.actions;
 
 import com.jfinal.core.Controller;
+import com.jfinal.kit.JsonKit;
 import com.qysoft.rapid.domain.Bean;
 
 import javax.servlet.http.HttpServletRequest;
@@ -54,5 +55,9 @@ public class RapidAction extends Controller {
 
     public void setJson(Object object){
         setAttr("result", object);
+    }
+
+    public String toJson(Object object) {
+        return JsonKit.toJson(object);
     }
 }

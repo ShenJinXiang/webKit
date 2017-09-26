@@ -81,23 +81,14 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-            <%--<iframe src="https://eve.tiancity.com" id="main-frame" class="lay-webkit-main-frame" frameborder="0" ></iframe>--%>
-            <%--<iframe src="<%=ctx%>/system/zygl" id="main-frame" class="lay-webkit-main-frame" frameborder="0" ></iframe>--%>
         <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
             <ul id="lay-main-title" class="layui-tab-title">
                 <li class="layui-this" zyid="00">工作看板</li>
-                <%--<li>
-                    资源管理
-                    <i class="layui-icon layui-unselect layui-tab-close">&#x1006;</i>
-                </li>--%>
             </ul>
             <div id="lay-main-content" class="layui-tab-content" style="padding: 0px;">
                 <div class="layui-tab-item layui-show" zyid="00">
                     <iframe src="<%=ctx%>/gzkb" class="lay-webkit-main-frame" frameborder="0" ></iframe>
                 </div>
-                <%--<div class="layui-tab-item">
-                    <iframe src="<%=ctx%>/system/zygl" class="lay-webkit-main-frame" frameborder="0" ></iframe>
-                </div>--%>
             </div>
         </div>
     </div>
@@ -107,9 +98,8 @@
         © layui.com - 底部固定区域
     </div>
 </div>
-<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<%--<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>--%>
 <%=RenderHelper.includedJavascript(request, "/static/plugins/layui/layui.js") %>
 <%=RenderHelper.includedJavascript(request, "/static/js/index.js") %>
-<%--<%=RenderHelper.includedAutoJavascript(request) %>--%>
 </body>
 </html>
