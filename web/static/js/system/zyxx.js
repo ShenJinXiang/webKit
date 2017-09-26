@@ -1,66 +1,51 @@
 
-layui.use(['common', 'table'], function(){
+layui.use(['common', 'jquery'], function(){
+    var $ = layui.jquery;
     var common = layui.common;
-    common.doService(ctx + '/system/zygl/query', {}, function(data) {
-       console.log(data);
+    common.doService(ctx + '/system/zygl/queryAllZyList', {}, function(data) {
+        $("#zyxx_tbody").empty();
+        if (data.length <= 0) {
+            var _empty_tr = '<tr colspan="5">暂无数据</tr>';
+            $("#zyxx_tbody").append($(_empty_tr))
+        } else {
+            data.forEach(function(item, index) {
+                var _tr = '<tr zyid="' + item.zyid + '">' +
+                    '<td>' + zypxStr(item) + '</td>' +
+                    '<td>' + zymcStr(item) + '</td>' +
+                    '<td>' + item.zylj + '</td>' +
+                    '<td>' + item.zylx + '</td>' +
+                    '<td>' + czStr(item) + '</td>' +
+                    '</tr>';
+                $("#zyxx_tbody").append($(_tr))
+            });
+
+        }
     });
 
-    layui.table.render({
-        elem: '#zyxxTable',
-        page: true,
-        cols: [[
-            {checkbox: true},
-            {field: 'id', title: 'ID', width: 80},
-            {field: 'name', title: '姓名', width: 120},
-            {field: 'age', title: '年龄', width: 60},
-            {field: 'address', title: '地址', width: 240}
-        ]],
-        data: [
-            {id: 1, name: '张三', age: 18, address: '北京'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 2, name: '李四', age: 28, address: '山西'},
-            {id: 3, name: '王五', age: 24, address: '台湾'}
-        ]
-    });
+    function zypxStr(row) {
+        var preStr = row.zyid.replace(/\d/g, '&nbsp;');
+        return preStr + row.zypx;
+    }
+
+    function zymcStr(row) {
+        var preStr = row.zyid.replace(/\d/g, '&nbsp;&nbsp;');
+        if (row.xjzy_size <= 0) {
+            return preStr + '<span class="layui-badge-dot layui-bg-black"></span> ' + row.zymc;
+        } else {
+            return preStr + '<i class="layui-icon" >&#xe623;</i> ' + row.zymc;
+        }
+    }
+
+    function czStr(row) {
+        return '<a href="javascript:edit(\'' + row.zyid + '\')">编辑</a>' +
+            '<a href="javascript:del(\'' + row.zyid + '\')">修改</a>';
+    }
+
+    function eidt(zyid) {
+
+    }
+
+    function del(zyid) {
+
+    }
 });

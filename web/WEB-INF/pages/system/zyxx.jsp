@@ -19,8 +19,20 @@
 </head>
 <body class='layui-anim layui-anim-upbit' style="padding: 15px;">
 zyxx
-<table id="zyxxTable" lay-filter="test"></table>
-<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<table id="zyxxTable" class="layui-table">
+    <thead>
+        <tr>
+            <th style="text-align: center;">排序</th>
+            <th style="text-align: center;">资源名称</th>
+            <th style="text-align: center;">资源路径</th>
+            <th style="text-align: center;">资源类型</th>
+            <th style="text-align: center;">操作</th>
+        </tr>
+    </thead>
+    <tbody id="zyxx_tbody">
+    </tbody>
+</table>
+<%--<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>--%>
 <%=RenderHelper.includedJavascript(request, "/static/plugins/layui/layui.js") %>
 <%=RenderHelper.includedJavascript(request, "/static/js/module-config.js") %>
 <%=RenderHelper.includedAutoJavascript(request) %>

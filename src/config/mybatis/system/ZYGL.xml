@@ -41,4 +41,30 @@
         order by zypx asc
     </select>
 
+    <select id="queryZyxxListBySjzyid" parameterType="bean" resultType="bean" >
+        SELECT
+        `zyid`,
+        `zymc`,
+        `sjzyid`,
+        `zylj`,
+        `zytb`,
+        `zyms`,
+        `zylx`,
+        `yxbz`,
+        `zypx`,
+        (select count(0) from xtwh_zyxx t where t.sjzyid = xtwh_zyxx.zyid) xjzy_size
+        FROM xtwh_zyxx
+        <where>
+            <choose>
+                <when test="sjzyid != null and sjzyid != '' " >
+                    and sjzyid = #{sjzyid}
+                </when>
+                <otherwise>
+                    and sjzyid is null
+                </otherwise>
+            </choose>
+        </where>
+        order by zypx asc
+    </select>
+
 </mapper>

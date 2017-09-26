@@ -12,4 +12,6 @@ public interface ZyxxMapper {
     List<Bean> queryYjzyxxList();
 
     List<Bean> queryEjzyxxListBySjzyid(String sjzyid);
+
+    List<Bean> queryZyxxListBySjzyid(Bean params);
 }

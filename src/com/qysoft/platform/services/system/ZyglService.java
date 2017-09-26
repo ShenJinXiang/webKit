@@ -25,4 +25,18 @@ public class ZyglService {
         }
         return list;
     }
+
+    public void queryZyxxList(String sjzyid, List<Bean> list) {
+        Bean params = new Bean();
+        params.set("sjzyid", sjzyid);
+        List<Bean> list1 = zyxxMapper.queryZyxxListBySjzyid(params);
+        for (Bean zyxx : list1) {
+            list.add(zyxx);
+            long xjzy_size = zyxx.getLong("xjzy_size");
+            if (xjzy_size > 0) {
+                queryZyxxList(zyxx.getStr("zyid"), list);
+            }
+        }
+
+    }
 }

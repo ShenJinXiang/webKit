@@ -1,5 +1,6 @@
-layui.define(['layer'], function(exports) {
-    var layer = layui.layer;
+layui.define(['layer', 'jquery'], function(exports) {
+    var layer = layui.layer
+        ,$ = layui.jquery;
 
 
     function qyAlert(msg,fn){
