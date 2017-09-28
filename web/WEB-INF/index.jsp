@@ -19,7 +19,7 @@
     </style>
     <title>webKit</title>
 </head>
-<body>
+<body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
         <div class="layui-logo">webKit</div>

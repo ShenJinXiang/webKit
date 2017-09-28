@@ -4,7 +4,7 @@ layui.use(['element', 'jquery'], function(){
         ,$ = layui.jquery;
     initMainFrameHeight();
 
-    $(window).resize(initMainFrameHeight);
+    // $(window).resize(initMainFrameHeight);
 
     $("#menu-nav a").on("click", function() {
         var zyid = $(this).attr('zyid');

@@ -30,7 +30,7 @@ layui.use(['common', 'jquery'], function(){
     function zymcStr(row) {
         var preStr = row.zyid.replace(/\d/g, '&nbsp;&nbsp;');
         if (row.xjzy_size <= 0) {
-            return preStr + '<span class="layui-badge-dot layui-bg-black"></span> ' + row.zymc;
+            return preStr + '<span class="lay-icon-dot"></span> ' + row.zymc;
         } else {
             return preStr + '<i class="layui-icon" >&#xe623;</i> ' + row.zymc;
         }

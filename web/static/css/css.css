@@ -1,3 +1,11 @@
 iframe.lay-webkit-main-frame {
     width: 100%;
 }
+.lay-icon-dot {
+    width:8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #555;
+    position: relative;
+}

@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= RenderHelper.includedStyle(request, "/static/plugins/layui/css/layui.css") %>
+    <%= RenderHelper.includedStyle(request, "/static/css/css.css") %>
     <%
         String ctx = request.getContextPath();
     %>
